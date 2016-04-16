@@ -14,7 +14,7 @@
     "optimize"
   ],
   "dependencies": {
-    "babel-helper-is-react-class": "^0.0.0"
+    "babel-helper-is-react-class": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
