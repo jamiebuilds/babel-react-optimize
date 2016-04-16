@@ -1,0 +1,19 @@
+{
+  "name": "babel-helper-is-react-class",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "James Kyle <me@thejameskyle.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/thejamekyle/babel-helper-is-react-class#readme",
+  "repository": "https://github.com/thejamekyle/babel-helper-is-react-class/tree/master/packages/babel-helper-is-react-class",
+  "bugs": "https://github.com/thejamekyle/babel-helper-is-react-class/issues",
+  "keywords": [
+    "babel-helper",
+    "react",
+    "optimize"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

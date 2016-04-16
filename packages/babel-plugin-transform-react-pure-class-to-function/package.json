@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-transform-react-pure-class-to-function",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "James Kyle <me@thejameskyle.com>",
+  "homepage": "https://github.com/thejamekyle/babel-plugin-transform-react-pure-class-to-function#readme",
+  "repository": "https://github.com/thejamekyle/babel-plugin-transform-react-pure-class-to-function/tree/master/packages/babel-plugin-transform-react-pure-class-to-function",
+  "bugs": "https://github.com/thejamekyle/babel-plugin-transform-react-pure-class-to-function/issues",
+  "keywords": [
+    "babel-helper",
+    "react",
+    "optimize"
+  ],
+  "dependencies": {
+    "babel-helper-is-react-class": "^0.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-plugin-syntax-class-properties": "^6.5.0",
+    "babel-plugin-syntax-jsx": "^6.5.0"
+  }
+}
