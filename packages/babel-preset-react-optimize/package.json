@@ -1,11 +1,10 @@
 {
   "name": "babel-preset-react-optimize",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "license": "MIT",
   "author": "James Kyle <me@thejameskyle.com>",
-  "license": "MIT",
   "homepage": "https://github.com/thejamekyle/babel-preset-react-optimize#readme",
   "repository": "https://github.com/thejamekyle/babel-preset-react-optimize/tree/master/packages/babel-preset-react-optimize",
   "bugs": "https://github.com/thejamekyle/babel-preset-react-optimize/issues",
