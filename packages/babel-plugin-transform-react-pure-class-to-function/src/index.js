@@ -1,7 +1,5 @@
-import isReactClassHelper from 'babel-helper-is-react-class';
-
-export default function({ types: t }) {
-  const isReactClass = isReactClassHelper(t);
+module.exports = function({ types: t }) {
+  const isReactClass = require('babel-helper-is-react-class')(t);
 
   const bodyVisitor = {
     ClassMethod(path) {

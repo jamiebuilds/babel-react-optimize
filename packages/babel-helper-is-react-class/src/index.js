@@ -1,4 +1,4 @@
-export default function(t) {
+module.exports = function(t) {
   return function isReactClass(node) {
     const superClass = node.superClass;
     return (
