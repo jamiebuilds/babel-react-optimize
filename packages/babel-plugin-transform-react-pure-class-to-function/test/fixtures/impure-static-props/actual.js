@@ -1,4 +1,4 @@
-class Foo extends React.Component {
+class Foo extends Component {
   static bar = 'bar';
 
   render() {
