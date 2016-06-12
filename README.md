@@ -137,6 +137,29 @@ MyComponent.propTypes = {
 };
 ```
 
+### [`transform-react-router-optimize`](https://github.com/nerdlabs/babel-plugin-transform-react-router-optimize)
+
+The [react-router](https://github.com/reactjs/react-router) guides mention a
+technique to reduce bundle size by only including neccessary parts of the
+react-router lib.
+
+[Read the guide here](https://github.com/reactjs/react-router/blob/master/docs/guides/MinimizingBundleSize.md).
+
+This plugin will do the transformation automatically for you.
+
+**Input:**
+```js
+import { Link, Route, Router } from 'react-router'
+```
+
+**Output:**
+
+```js
+import Link from 'react-router/lib/Link'
+import Route from 'react-router/lib/Route'
+import Router from 'react-router/lib/Router'
+```
+
 ## Install
 
 ```sh
