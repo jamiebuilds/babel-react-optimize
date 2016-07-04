@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "license": "MIT",
   "author": "James Kyle <me@thejameskyle.com>",
-  "homepage": "https://github.com/thejamekyle/babel-helper-is-react-class#readme",
-  "repository": "https://github.com/thejamekyle/babel-helper-is-react-class/tree/master/packages/babel-helper-is-react-class",
-  "bugs": "https://github.com/thejamekyle/babel-helper-is-react-class/issues",
+  "homepage": "https://github.com/thejameskyle/babel-react-optimize/tree/master/packages/babel-helper-is-react-class",
+  "repository": "https://github.com/thejameskyle/babel-react-optimize/tree/master/packages/babel-helper-is-react-class",
+  "bugs": "https://github.com/thejameskyle/babel-react-optimize/issues",
   "keywords": [
     "babel-helper",
     "react",

@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "license": "MIT",
   "author": "James Kyle <me@thejameskyle.com>",
-  "homepage": "https://github.com/thejamekyle/babel-preset-react-optimize#readme",
-  "repository": "https://github.com/thejamekyle/babel-preset-react-optimize/tree/master/packages/babel-preset-react-optimize",
-  "bugs": "https://github.com/thejamekyle/babel-preset-react-optimize/issues",
+  "homepage": "https://github.com/thejameskyle/babel-react-optimize#readme",
+  "repository": "https://github.com/thejameskyle/babel-react-optimize/tree/master/packages/babel-preset-react-optimize",
+  "bugs": "https://github.com/thejameskyle/babel-react-optimize/issues",
   "keywords": [
     "babel-plugin",
     "react",
