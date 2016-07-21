@@ -152,7 +152,7 @@ $ npm install --save-dev babel-preset-react-optimize
   "presets": ["es2015", "react"],
   "env": {
     "production": {
-      "presets": ["es2015", "react", "react-optimize"]
+      "presets": ["react-optimize"]
     }
   }
 }
