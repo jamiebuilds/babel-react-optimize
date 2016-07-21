@@ -16,8 +16,9 @@
   "dependencies": {
     "babel-plugin-transform-react-constant-elements": "^6.5.0",
     "babel-plugin-transform-react-inline-elements": "^6.6.5",
+    "babel-plugin-transform-react-pure-class-to-function": "^1.0.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.2.5",
-    "babel-plugin-transform-react-pure-class-to-function": "^1.0.1"
+    "babel-plugin-transform-react-router-optimize": "^1.0.1"
   },
   "devDependencies": {}
 }
