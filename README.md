@@ -160,7 +160,7 @@ $ npm install --save-dev babel-preset-react-optimize
 
 ## Benchmarks
 
-We haven't yet much benchmark.
+We haven't yet made benchmark.
 But this [post](https://medium.com/doctolib-engineering/improve-react-performance-with-babel-16f1becfaa25)
 can give you an idea of what you can win in real life.
 Notice that the win depends a lot on how you are using the React API.
