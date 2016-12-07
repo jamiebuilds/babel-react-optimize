@@ -1,0 +1,19 @@
+{
+  "name": "babel-helper-is-stateless-component",
+  "version": "0.1.0",
+  "description": "Check whether or not the node is a stateless functionnal component",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "Olivier Tassinari <olivier.tassinari@gmail.com>",
+  "homepage": "https://github.com/thejamekyle/babel-preset-react-optimize#readme",
+  "repository": "https://github.com/thejamekyle/babel-preset-react-optimize/tree/master/packages/babel-helper-is-stateless-component",
+  "bugs": "https://github.com/thejamekyle/babel-preset-react-optimize/issues",
+  "keywords": [
+    "babel-plugin",
+    "react",
+    "stateless",
+    "component"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
