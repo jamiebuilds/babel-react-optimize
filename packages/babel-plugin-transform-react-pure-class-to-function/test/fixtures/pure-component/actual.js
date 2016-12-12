@@ -1,4 +1,4 @@
-module.exports = class Foo extends React.Component {
+module.exports = class Foo extends React.PureComponent {
   static propTypes = {
     foo: React.PropTypes.string.isRequired
   };

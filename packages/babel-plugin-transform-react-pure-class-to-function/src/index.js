@@ -54,8 +54,8 @@ module.exports = function({ types: t }) {
   return {
     visitor: {
       Class(path) {
-        if (!isReactClass(path.node)) {
-          // yo, fuck this class then.
+        if (!isReactClass(path)) {
+          // Not a React class
           return;
         }
 
@@ -70,49 +70,57 @@ module.exports = function({ types: t }) {
         path.traverse(bodyVisitor, state);
 
         if (!state.isPure || !state.renderMethod) {
-          // fuck this class too.
+          // Not a class that can be converted to a functional component
           return;
         }
 
         const id = t.identifier(path.node.id.name);
 
-        let replacement = [];
-
         state.thisProps.forEach(function(thisProp) {
           thisProp.replaceWith(t.identifier('props'));
         });
 
-        replacement.push(
-          t.functionDeclaration(
-            id,
-            [t.identifier('props')],
-            state.renderMethod.node.body
-          )
+        const functionalComponent = t.functionDeclaration(
+          id,
+          [t.identifier('props')],
+          state.renderMethod.node.body
         );
 
-        state.properties.forEach(prop => {
-          replacement.push(t.expressionStatement(
-            t.assignmentExpression('=',
-              t.MemberExpression(id, prop.node.key),
-              prop.node.value
-            )
-          ));
-        });
+        const staticProps = state.properties.map(prop => t.expressionStatement(
+          t.assignmentExpression(
+            '=',
+            t.memberExpression(id, prop.node.key),
+            prop.node.value
+          )
+        ));
 
         if (t.isExpression(path.node)) {
-          replacement.push(t.returnStatement(id));
-
-          replacement = t.callExpression(
-            t.functionExpression(null, [],
-              t.blockStatement(replacement)
-            ),
-            []
+          // Wrap with IIFE for expressions
+          const iife = [
+            functionalComponent,
+            ...staticProps,
+            t.returnStatement(id)
+          ];
+          path.replaceWith(
+            t.callExpression(
+              t.functionExpression(
+                null,
+                [],
+                t.blockStatement(iife)
+              ),
+              []
+            )
           );
+        } else if (t.isExportDeclaration(path.parent)) {
+          // Fix "We don't know what to do with this node type" errors
+          // for ES6 default/named exports
+          path.replaceWith(functionalComponent);
+          path.parentPath.insertAfter(staticProps);
+        } else {
+          // Everything else
+          const replacement = [functionalComponent, ...staticProps];
+          path.replaceWithMultiple(replacement);
         }
-
-        path.replaceWithMultiple(
-          replacement
-        );
       }
     }
   };

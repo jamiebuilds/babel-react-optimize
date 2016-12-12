@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-react-pure-class-to-function",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/index.js",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "optimize"
   ],
   "dependencies": {
-    "babel-helper-is-react-class": "^1.0.0"
+    "babel-helper-is-react-class": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",

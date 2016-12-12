@@ -1,4 +1,4 @@
-module.exports = class Foo extends React.Component {
+export default class Foo extends React.Component {
   static propTypes = {
     foo: React.PropTypes.string.isRequired
   };
@@ -7,4 +7,4 @@ module.exports = class Foo extends React.Component {
     this.props.foo;
     return <div />;
   }
-};
+}
