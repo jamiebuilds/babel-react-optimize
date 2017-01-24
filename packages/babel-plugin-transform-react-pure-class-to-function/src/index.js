@@ -78,14 +78,19 @@ module.exports = function({ types: t }) {
 
         let replacement = [];
 
+        const renameProps = state.renderMethod.node.body.body.some(function(statement) {
+            const isVariableDeclaration = statement.type === 'VariableDeclaration';
+            return isVariableDeclaration && statement.declarations.filter(declr => declr.id.name === 'props').length;
+        });
+
         state.thisProps.forEach(function(thisProp) {
-          thisProp.replaceWith(t.identifier('props'));
+          thisProp.replaceWith(t.identifier(renameProps ? '__props': 'props'));
         });
 
         replacement.push(
           t.functionDeclaration(
             id,
-            [t.identifier('props')],
+            [t.identifier(renameProps ? '__props': 'props')],
             state.renderMethod.node.body
           )
         );
@@ -116,4 +121,4 @@ module.exports = function({ types: t }) {
       }
     }
   };
-}
+};
